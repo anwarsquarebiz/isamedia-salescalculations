@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isamedia - Sales Calculations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #7CAAB9;">    
+    <div id="main" class="main h-100">
+        <!-- Top -->
+        <div style="display: flex; flex-direction: row; align-items: flex-end;" class="w-100 mt-5">
+            <div class="col-4 p-0">
+                <img id="workethics1" class="animate__animated animate__bounceInDown" style="display: none; width: 100%;" src="WORK ETHICS TOP.svg" alt="">                
+            </div>
+            <div class="col-4 p-0 animate__animated animate__bounceInDown">
+                <img id="competition1" class="animate__animated animate__bounceInDown" style="display: none; width: 100%;" src="COMPETITION TOP.svg" alt="">
+            </div>
+            <div class="col-4 p-0 animate__animated animate__bounceInDown">
+                <img id="needsandgoals1" class="animate__animated animate__bounceInDown" style="display: none; width: 100%;" src="NEEDS & GOALS TOP.svg" alt="">
+            </div>
+        </div>
+        <div class="row w-100">
+            <div class="col-4 p-0">
+                <div id="workethics2" style="display: none; height: 100%;" class="text-center titles workethics animate__animated animate__bounceInDown">
+                    WORK ETHICS
+                    <div>
+                        <ul>
+                            <li data-bs-toggle="modal" data-bs-target="#effort">Effort</li>
+                            <li>Behavior</li>
+                            <li>Values</li>
+                            <li>Goals & KPI</li>
+                            <li>Discipline</li>
+                            <li>En-thu-si-asm</li>                    
+                        </ul>            
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 p-0">
+            <div id="competition2" style="display: none; height: 100%;" class="text-center titles competition animate__animated animate__bounceInDown">
+                COMPETITION
+                <div>
+                    <ul>
+                        <li>Weaknesses</li>
+                        <li>Who is the competition</li>
+                        <li>Our strong features</li>
+                    </ul>            
+                </div>                
+            </div>
+            </div>
+
+            <div class="col-4 p-0">
+            <div id="needsandgoals2" style="display: none; height: 100%;" class="text-center titles needsandgoals animate__animated animate__bounceInDown">
+                NEEDS & GOALS
+                <div>
+                    <ul>
+                        <li>Business Knowledge</li>
+                        <li>Business Match</li>
+                        <li>Business Match</li>
+                        <li>Business Sector</li>
+                        <li>Preperation</li>
+                        <li>The Dutch Model</li>                    
+                    </ul>            
+                </div> 
+            </div>
+            </div>
+        </div>
+
+        <!-- Start button Success -->
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div class="mt-3" style="width: 800px; display: flex; justify-content: space-between;">
+                <img onclick="showWorkEthics()" style="display: none;" id="consultant" class="animate__animated animate__bounceInDown" src="Consultant.svg" alt="">
+                <img onclick="showCompetition()" style="display: none;" id="media" class="animate__animated animate__bounceInDown" src="Media.svg" alt="">
+                <img onclick="showNeedsAndGoals()" style="display: none;" id="customer" class="animate__animated animate__bounceInDown" src="Customer.svg" alt="">
+            </div>
+
+            <div id="verticlelines" style="width: 730px; display: none; justify-content: space-between;">
+                <div class="animate__animated animate__bounceInDown" style="height: 30px; width: 3px; background-color: white;"></div>
+                <div class="animate__animated animate__bounceInDown" style="height: 30px; width: 3px; background-color: white;"></div>
+                <div class="animate__animated animate__bounceInDown" style="height: 30px; width: 3px; background-color: white;"></div>
+            </div>
+
+            <div id="horizontalline" style="width: 730px; display: none; justify-content: center;">
+                <div class="animate__animated animate__bounceInLeft" style="height: 3px; width: 100%; background-color: white;"></div>
+            </div>
+
+            <div id="target" class="animate__animated animate__bounceIn text-center text-white" style="font-size: 35px; display: none;">                             
+                =
+            </div>
+
+            <div onclick="hideDefault()" class="start">
+                
+            </div>
+
+            <div id="verticlelines2" style="width: 730px; display: none; justify-content: space-between; margin-top: 30px;">
+                <div class="animate__animated animate__bounceInDown" style="height: 30px; width: 3px; background-color: white;"></div>
+                <div class="animate__animated animate__bounceInDown" style="height: 30px; width: 3px; background-color: white;"></div>
+                <div class="animate__animated animate__bounceInDown" style="height: 30px; width: 3px; background-color: white;"></div>
+            </div>            
+        </div>
+
+        <!-- Bottom -->
+        <div style="display: flex; flex-direction: row; align-items: flex-end;" class="w-100">
+            <div class="col-4 p-0">
+                <img id="sharpattitude1" class="animate__animated animate__bounceInUp" style="display: none; width: 100%;" src="SHARP ATTITUDE.svg" alt="">                
+            </div>
+            <div class="col-4 p-0">
+                <img id="outcome1" class="animate__animated animate__bounceInUp" style="display: none; width: 100%;" src="OUTCOME.svg" alt="">
+            </div>
+            <div class="col-4 p-0">
+                <img id="type1" class="animate__animated animate__bounceInUp" style="display: none; width: 100%;" src="TYPE.svg" alt="">
+            </div>
+        </div>
+        <div class="row w-100">
+            <div class="col-4 p-0">
+                <div id="sharpattitude2" style="display: none; height: 100%;" class="text-center titles sharpattitude animate__animated animate__bounceInUp">
+                    SHARP ATTITUDE
+                    <div>
+                        <ul>
+                            <li>Matching</li>
+                            <li>Tone of voice</li>
+                            <li>Professional Language</li>
+                            <li>Body Language</li>
+                            <li>Be Passionated</li>
+                            <li>Self Observation</li>                    
+                            <li>4S</li>                    
+                            <li>Think outside the box</li>                    
+                        </ul>            
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 p-0">
+            <div id="outcome2" style="display: none; height: 100%;" class="text-center titles outcome animate__animated animate__bounceInUp">
+                OUTCOME
+                <div>
+                    <ul>
+                        <li>The value</li>
+                        <li>Objections</li>
+                        <li>Our Strengths</li>
+                        <li>Statistics</li>
+                        <li>Argument</li>
+                        <li>Treatment</li>
+                    </ul>            
+                </div>                
+            </div>
+            </div>
+
+            <div class="col-4 p-0">
+            <div id="type2" style="display: none; height: 100%;" class="text-center titles type animate__animated animate__bounceInUp">
+                TYPE
+                <div>
+                    <ul>
+                        <li>Branch</li>
+                        <li>Size</li>
+                        <li>Market</li>
+                        <li>Position</li>
+                        <li>Corporation</li>
+                        <li>Development</li>                    
+                        <li>Image</li>                    
+                        <li>Budgets</li>                    
+                    </ul>            
+                </div> 
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vertically centered scrollable modal -->
+    <div class="modal fade" id="effort" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Effort</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">                
+                    <!-- Video -->
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/xMs4e9esYkg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    Description text on the topic will go here...
+
+
+
+
+                    Long Description
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        function hideDefault() {            
+            var x = document.getElementById("target");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } //else {x.style.display = "none";}
+
+            var consultant = document.getElementById("consultant");
+            if (consultant.style.display === "none") {
+                consultant.style.display = "block";
+            } // else {consultant.style.display = "none";}
+
+            var media = document.getElementById("media");
+            if (media.style.display === "none") {
+                media.style.display = "block";
+            } // else {media.style.display = "none";}
+
+            var customer = document.getElementById("customer");
+            if (customer.style.display === "none") {
+                customer.style.display = "block";
+            } // else {customer.style.display = "none";}
+
+            var verticlelines = document.getElementById("verticlelines");
+            if (verticlelines.style.display === "none") {
+                verticlelines.style.display = "flex";
+            } // else {verticlelines.style.display = "none";}
+
+            var verticlelines2 = document.getElementById("verticlelines2");
+            if (verticlelines2.style.display === "none") {
+                verticlelines2.style.display = "flex";
+            } // else {verticlelines2.style.display = "none";}
+
+            var horizontalline = document.getElementById("horizontalline");
+            if (horizontalline.style.display === "none") {
+                horizontalline.style.display = "flex";
+            } // else {horizontalline.style.display = "none";}
+        }
+
+        function showWorkEthics() {
+            var workethics1 = document.getElementById("workethics1");
+            if (workethics1.style.display === "none") {
+                workethics1.style.display = "flex";
+            } //else {workethics1.style.display = "none";}
+
+            var workethics2 = document.getElementById("workethics2");
+            if (workethics2.style.display === "none") {
+                workethics2.style.display = "block";
+            } //else {workethics2.style.display = "none";}
+
+            var sharpattitude1 = document.getElementById("sharpattitude1");
+            if (sharpattitude1.style.display === "none") {
+                sharpattitude1.style.display = "flex";
+            } //else {sharpattitude1.style.display = "none";}
+
+            var sharpattitude2 = document.getElementById("sharpattitude2");
+            if (sharpattitude2.style.display === "none") {
+                sharpattitude2.style.display = "block";
+            } // else {sharpattitude2.style.display = "none";}
+        }
+
+        function showCompetition() {
+            var competition1 = document.getElementById("competition1");
+            if (competition1.style.display === "none") {
+                competition1.style.display = "flex";
+            } //else {competition1.style.display = "none";}
+
+            var competition2 = document.getElementById("competition2");
+            if (competition2.style.display === "none") {
+                competition2.style.display = "block";
+            } //else {competition2.style.display = "none";}
+
+            var outcome1 = document.getElementById("outcome1");
+            if (outcome1.style.display === "none") {
+                outcome1.style.display = "flex";
+            } //else {outcome1.style.display = "none";}
+
+            var outcome2 = document.getElementById("outcome2");
+            if (outcome2.style.display === "none") {
+                outcome2.style.display = "block";
+            } //else {outcome2.style.display = "none";}
+            
+        }
+
+        function showNeedsAndGoals() {
+            var needsandgoals1 = document.getElementById("needsandgoals1");
+            if (needsandgoals1.style.display === "none") {
+                needsandgoals1.style.display = "flex";
+            } //else {needsandgoals1.style.display = "none";}
+
+            var needsandgoals2 = document.getElementById("needsandgoals2");
+            if (needsandgoals2.style.display === "none") {
+                needsandgoals2.style.display = "block";
+            } // else {needsandgoals2.style.display = "none";}
+
+            var type1 = document.getElementById("type1");
+            if (type1.style.display === "none") {
+                type1.style.display = "flex";
+            } //else {type1.style.display = "none";}
+
+            var type2 = document.getElementById("type2");
+            if (type2.style.display === "none") {
+                type2.style.display = "block";
+            } // else {type2.style.display = "none";}
+        }
+        
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+
+</html>
