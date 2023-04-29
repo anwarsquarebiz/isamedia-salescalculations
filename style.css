@@ -1,3 +1,7 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 .start {
   height: 100px;
   width: 100px;
@@ -10,11 +14,21 @@
   background-image: url("Property 1=Hover.svg");
 }
 
+.topic {
+  transition: border 0.1s;
+}
+
+.topic:hover {
+  border: 3px solid #00778C;
+  border-radius: 50%;
+}
+
 .main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .titles {
@@ -23,12 +37,23 @@
   font-weight: bold;
 }
 
+.titles ul {
+  padding: 0;
+}
+
 .titles ul li {
   list-style-type: none; /* Remove bullets */
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
   font-weight: normal;
   text-align: start;
+  text-align: center;
+  transition: font-size 0.5s;
+}
+
+.titles ul li:hover {
+  font-size: 25px;
+  cursor: pointer;
 }
 
 .workethics {
@@ -54,3 +79,59 @@
 .type {
   background-color: #9d9182;
 }
+
+/* Rotating animation START */
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
+
+/* Rotating animation END */
+
+/* Floating START */
+.floating { 
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }   
+}
+/* Floating END */
