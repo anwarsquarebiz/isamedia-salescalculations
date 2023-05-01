@@ -1,17 +1,21 @@
 body {
   font-family: 'Poppins', sans-serif;
+  cursor: url('key.svg'), auto;
 }
 
 .start {
   height: 100px;
   width: 100px;
-  background-image: url("Property 1=Default.svg");
+  /* background-image: url("Property 1=Default.svg"); */
+  background-image: url("Closed Tresure Box Default.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .start:hover {
-  background-image: url("Property 1=Hover.svg");
+  /* background-image: url("Property 1=Hover.svg"); */
+  background-image: url("Closed Tresure Box Hover.svg");
+  transition-delay: 1ms;
 }
 
 .topic {
