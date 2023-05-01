@@ -24,7 +24,7 @@
 
 <body style="background-color: #7CAAB9;">        
     <div id="main" class="main">
-        <img style="width: 250px; position: absolute; top: 10px" class="mt-3 floating" src="cloud2.svg" alt="">
+        <img style="width: 350px; position: absolute; top: 10px" class="mt-3 floating" src="cloud2.svg" alt="">
         <!-- Top -->
         <div style="display: flex; flex-direction: row; align-items: flex-end; margin-top: 150px;" class="w-100">
             <div class="col-4 p-0">
@@ -102,18 +102,39 @@
                 <div class="animate__animated animate__bounceInLeft" style="height: 3px; width: 100%; background-color: white;"></div>
             </div>
 
-            <div id="target" class="animate__animated animate__bounceIn text-center text-white" style="font-size: 35px; display: none;">                             
-                =
+            <div class="row" style="width: 730px;">
+                <div class="col ps-0">
+                    <div class="animate__animated animate__bounceInDown" style="width: 3px; height: 100%; background-color: white;"></div>
+                </div>
+                <div class="col">
+                    <div id="target" class="animate__animated animate__bounceIn text-center text-white" style="font-size: 35px; display: none;">                             
+                        =
+                    </div>
+                </div>
+                <div class="col pe-0">
+                    <div class="animate__animated animate__bounceInDown" style="float: right; width: 3px; height: 100%; background-color: white;"></div>
+                </div>
             </div>
 
-            <div id="start" onclick="hideDefault()" class="start animate__animated animate__heartBeat">
-                
+            
+            <div class="row" style="width: 730px;">
+                <div class="col ps-0">
+                    <div id="verticlelines3" class="animate__animated animate__bounceInDown" style="width: 3px; height: 100%; background-color: white; display: none;"></div>
+                </div>
+                <div class="col">
+                    <div id="start" onclick="hideDefault()" class="start animate__animated animate__heartBeat ms-auto ms-auto me-auto">
+                        
+                    </div>
+                </div>
+                <div class="col pe-0">
+                    <div id="verticlelines4" class="animate__animated animate__bounceInDown" style="float: right; width: 3px; height: 100%; background-color: white; display: none;"></div>
+                </div>
             </div>
-            <div id="tag-line" style="font-family: 'Poppins', sans-serif;" class="animate__animated animate__heartBeat mt-2 text-white">
+            <div id="tag-line" style="font-family: 'Poppins', sans-serif;" class="animate__animated animate__heartBeat text-white">
                 Click on, the treasure box to open the treasure of ISA Media
             </div>
 
-            <div id="verticlelines2" style="width: 730px; display: none; justify-content: space-between; margin-top: 30px;">
+            <div id="verticlelines2" style="width: 730px; display: none; justify-content: space-between;">
                 <div class="animate__animated animate__bounceInDown" style="height: 30px; width: 3px; background-color: white;"></div>
                 <div class="animate__animated animate__bounceInDown" style="height: 30px; width: 3px; background-color: white;"></div>
                 <div class="animate__animated animate__bounceInDown" style="height: 30px; width: 3px; background-color: white;"></div>
@@ -251,6 +272,16 @@
             var verticlelines2 = document.getElementById("verticlelines2");
             if (verticlelines2.style.display === "none") {
                 verticlelines2.style.display = "flex";
+            } // else {verticlelines2.style.display = "none";}
+
+            var verticlelines3 = document.getElementById("verticlelines3");
+            if (verticlelines3.style.display === "none") {
+                verticlelines3.style.display = "block";
+            } // else {verticlelines2.style.display = "none";}
+
+            var verticlelines4 = document.getElementById("verticlelines4");
+            if (verticlelines4.style.display === "none") {
+                verticlelines4.style.display = "block";
             } // else {verticlelines2.style.display = "none";}
 
             var horizontalline = document.getElementById("horizontalline");

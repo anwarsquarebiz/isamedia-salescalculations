@@ -41,8 +41,17 @@ body {
   font-weight: bold;
 }
 
+.titles div {
+  height: 100%;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid grey;
+}
+
 .titles ul {
   padding: 0;
+  margin-bottom: 0px;
+  margin-top: 16px;
 }
 
 .titles ul li {
@@ -53,6 +62,8 @@ body {
   text-align: start;
   text-align: center;
   transition: font-size 0.5s;
+  color: grey;
+  height: 100%;
 }
 
 .titles ul li:hover {
