@@ -251,142 +251,160 @@
                 document.getElementById("start").style.backgroundImage = "url('Property 1=Default.svg')";
                 document.getElementById("tag-line").style.display = "None";
                 x.style.display = "block";
-            } //else {x.style.display = "none";}
+            } else {
+                x.style.display = "none";
+            }
 
             var topics = document.getElementsByClassName("topic-heading")
             if (topics[0].style.display === "none") {
                 topics[0].style.display = "block";
-            }
+            } else {topics[0].style.display = "none"}
+
             if (topics[1].style.display === "none") {
                 topics[1].style.display = "block";
-            }
+            } else {topics[1].style.display = "none"}
+
             if (topics[2].style.display === "none") {
                 topics[2].style.display = "block";
-            }
+            } else {topics[2].style.display = "none"}
         
             var consultant = document.getElementById("consultant");
             if (consultant.style.display === "none") {
                 consultant.style.display = "block";
-            } //else {consultant.style.display = "none";}
+            } else {consultant.style.display = "none";}
 
             var media = document.getElementById("media");
             if (media.style.display === "none") {
                 media.style.display = "block";
-            } // else {media.style.display = "none";}
+            } else {media.style.display = "none";}
 
             var customer = document.getElementById("customer");
             if (customer.style.display === "none") {
                 customer.style.display = "block";
-            } // else {customer.style.display = "none";}
-
-            // var verticlelines = document.getElementById("verticlelines");
-            // if (verticlelines.style.display === "none") {
-            //     verticlelines.style.display = "flex";
-            // } // else {verticlelines.style.display = "none";}
-
-            // var verticlelines2 = document.getElementById("verticlelines2");
-            // if (verticlelines2.style.display === "none") {
-            //     verticlelines2.style.display = "flex";
-            // } // else {verticlelines2.style.display = "none";}
-
-            // var verticlelines3 = document.getElementById("verticlelines3");
-            // if (verticlelines3.style.display === "none") {
-            //     verticlelines3.style.display = "block";
-            // } // else {verticlelines2.style.display = "none";}
-
-            // var verticlelines4 = document.getElementById("verticlelines4");
-            // if (verticlelines4.style.display === "none") {
-            //     verticlelines4.style.display = "block";
-            // } // else {verticlelines2.style.display = "none";}
-
-            // var horizontalline = document.getElementById("horizontalline");
-            // if (horizontalline.style.display === "none") {
-            //     horizontalline.style.display = "flex";
-            // } // else {horizontalline.style.display = "none";}
-
+            } else {customer.style.display = "none";}
+            
             var leftvertical = document.getElementById("leftvertical");
             if (leftvertical.style.display === "none") {
                 leftvertical.style.display = "block";
-            } // else {leftvertical.style.display = "none";}
+            } else {leftvertical.style.display = "none";}
 
             var middlevertical = document.getElementById("middlevertical");
             if (middlevertical.style.display === "none") {
                 middlevertical.style.display = "block";
-            } // else {middlevertical.style.display = "none";}
+            } else {middlevertical.style.display = "none";}
             
             var rightvertical = document.getElementById("rightvertical");
             if (rightvertical.style.display === "none") {
                 rightvertical.style.display = "block";
-            } // else {rightvertical.style.display = "none";}
-
-
+            } else {rightvertical.style.display = "none";}
         }
-
+                
+        situation1 = 0
+        
         function showWorkEthics() {
+
             var workethics1 = document.getElementById("workethics1");
-            if (workethics1.style.display === "none") {
-                workethics1.style.display = "flex";
-            } else {workethics1.style.display = "none";}
-
-            var workethics2 = document.getElementById("workethics2");
-            if (workethics2.style.display === "none") {
-                workethics2.style.display = "block";
-            } else {workethics2.style.display = "none";}
-
+            var workethics2 = document.getElementById("workethics2"); 
             var sharpattitude1 = document.getElementById("sharpattitude1");
-            if (sharpattitude1.style.display === "none") {
-                sharpattitude1.style.display = "flex";
-            } else {sharpattitude1.style.display = "none";}
-
             var sharpattitude2 = document.getElementById("sharpattitude2");
-            if (sharpattitude2.style.display === "none") {
+
+            if (situation1 === 0)
+            {
+                workethics1.style.display = "flex";
+                workethics2.style.display = "block";
+                situation1 = 1
+            } 
+            else if (situation1 === 1) 
+            {
+                sharpattitude1.style.display = "flex";
                 sharpattitude2.style.display = "block";
-            } else {sharpattitude2.style.display = "none";}
+                situation1 = 2 
+            }
+
+            else if (situation1 === 2) 
+            {
+                sharpattitude1.style.display = "none";
+                sharpattitude2.style.display = "none";
+                situation1 = 3 
+            }
+            else if (situation1 === 3) {
+                workethics1.style.display = "none";
+                workethics2.style.display = "none";
+                situation1 = 0
+            }
+            console.log("Situation value : " + situation1)
+
         }
+
+        situation2 = 0
 
         function showCompetition() {
             var competition1 = document.getElementById("competition1");
-            if (competition1.style.display === "none") {
-                competition1.style.display = "flex";
-            } else {competition1.style.display = "none";}
-
             var competition2 = document.getElementById("competition2");
-            if (competition2.style.display === "none") {
-                competition2.style.display = "block";
-            } else {competition2.style.display = "none";}
-
             var outcome1 = document.getElementById("outcome1");
-            if (outcome1.style.display === "none") {
-                outcome1.style.display = "flex";
-            } else {outcome1.style.display = "none";}
-
             var outcome2 = document.getElementById("outcome2");
-            if (outcome2.style.display === "none") {
+            
+            if (situation2 === 0)
+            {
+                competition1.style.display = "flex";
+                competition2.style.display = "block";
+                situation2 = 1
+            } 
+            else if (situation2 === 1) 
+            {
+                outcome1.style.display = "flex";
                 outcome2.style.display = "block";
-            } else {outcome2.style.display = "none";}
+                situation2 = 2 
+            }
+
+            else if (situation2 === 2) 
+            {
+                outcome1.style.display = "none";
+                outcome2.style.display = "none";
+                situation2 = 3 
+            }
+            else if (situation2 === 3) {
+                competition1.style.display = "none";
+                competition2.style.display = "none";
+                situation2 = 0
+            }
+            console.log("Situation value : " + situation2)
             
         }
 
+        situation3 = 0
+
         function showNeedsAndGoals() {
             var needsandgoals1 = document.getElementById("needsandgoals1");
-            if (needsandgoals1.style.display === "none") {
-                needsandgoals1.style.display = "flex";
-            } else {needsandgoals1.style.display = "none";}
-
             var needsandgoals2 = document.getElementById("needsandgoals2");
-            if (needsandgoals2.style.display === "none") {
-                needsandgoals2.style.display = "block";
-            } else {needsandgoals2.style.display = "none";}
-
             var type1 = document.getElementById("type1");
-            if (type1.style.display === "none") {
-                type1.style.display = "flex";
-            } else {type1.style.display = "none";}
-
             var type2 = document.getElementById("type2");
-            if (type2.style.display === "none") {
+            
+            if (situation3 === 0)
+            {
+                needsandgoals1.style.display = "flex";
+                needsandgoals2.style.display = "block";
+                situation3 = 1
+            } 
+            else if (situation3 === 1) 
+            {
+                type1.style.display = "flex";
                 type2.style.display = "block";
-            } else {type2.style.display = "none";}
+                situation3 = 2 
+            }
+
+            else if (situation3 === 2) 
+            {
+                type1.style.display = "none";
+                type2.style.display = "none";
+                situation3 = 3 
+            }
+            else if (situation3 === 3) {
+                needsandgoals1.style.display = "none";
+                needsandgoals2.style.display = "none";
+                situation3 = 0
+            }
+            console.log("Situation value : " + situation3)
         }
         
     </script>
