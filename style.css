@@ -4,8 +4,8 @@ body {
 }
 
 .start {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   /* background-image: url("Property 1=Default.svg"); */
   background-image: url("Closed Tresure Box Default.svg");
   background-size: contain;
@@ -20,11 +20,20 @@ body {
 
 .topic {
   transition: border 0.1s;
+  width: 150px;
 }
 
 .topic:hover {
-  border: 3px solid #00778C;
-  border-radius: 50%;
+  /* border: 3px solid #00778C; */
+  /* border-radius: 50%; */
+  cursor: pointer;
+}
+
+.topic-heading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  display: none;
 }
 
 .main {
@@ -62,7 +71,8 @@ body {
   text-align: start;
   text-align: center;
   transition: font-size 0.5s;
-  color: grey;
+  /* color: grey; */
+  color: #545759;
   height: 100%;
 }
 

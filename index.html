@@ -24,23 +24,28 @@
 
 <body style="background-color: #7CAAB9;">        
     <div id="main" class="main">
-        <img style="width: 350px; position: absolute; top: 10px" class="mt-3 floating" src="cloud2.svg" alt="">
-        <!-- Top -->
-        <div style="display: flex; flex-direction: row; align-items: flex-end; margin-top: 150px;" class="w-100">
+
+        <!-- CLOUD -->
+        <img style="width: 450px; position: absolute; top: 10px" class="mt-3 floating" src="cloud2.svg" alt="">
+        <!-- Top Topics START -->
+        <!-- Topic Images -->
+        <div style="display: flex; flex-direction: row; align-items: flex-end; margin-top: 250px;" class="w-100">
             <div class="col-4 p-0">
-                <img id="workethics1" class="animate__animated animate__bounceInDown" style="display: none; width: 100%;" src="WORK ETHICS TOP.svg" alt="">                
+                <img id="workethics1" class="animate__animated animate__bounceInDown" style="display: none; width: 100%;" src="WORK ETHICS TOP 2.svg" alt="">                
             </div>
             <div class="col-4 p-0 animate__animated animate__bounceInDown">
-                <img id="competition1" class="animate__animated animate__bounceInDown" style="display: none; width: 100%;" src="COMPETITION TOP.svg" alt="">
+                <img id="competition1" class="animate__animated animate__bounceInDown" style="display: none; width: 100%;" src="COMPETITION TOP 2.svg" alt="">
             </div>
             <div class="col-4 p-0 animate__animated animate__bounceInDown">
-                <img id="needsandgoals1" class="animate__animated animate__bounceInDown" style="display: none; width: 100%;" src="NEEDS & GOALS TOP.svg" alt="">
+                <img id="needsandgoals1" class="animate__animated animate__bounceInDown" style="display: none; width: 100%;" src="NEEDS & GOALS TOP 2.svg" alt="">
             </div>
         </div>
+
+        <!-- Top Topic options -->
         <div class="row w-100">
             <div class="col-4 p-0">
                 <div id="workethics2" style="display: none; height: 100%;" class="text-center titles workethics animate__animated animate__bounceInDown">
-                    WORK ETHICS
+                    <!-- WORK ETHICS -->
                     <div>
                         <ul>
                             <li data-bs-toggle="modal" data-bs-target="#effort">Effort</li>
@@ -56,7 +61,7 @@
 
             <div class="col-4 p-0">
             <div id="competition2" style="display: none; height: 100%;" class="text-center titles competition animate__animated animate__bounceInDown">
-                COMPETITION
+                <!-- COMPETITION -->
                 <div>
                     <ul>
                         <li>Weaknesses</li>
@@ -69,7 +74,7 @@
 
             <div class="col-4 p-0">
             <div id="needsandgoals2" style="display: none; height: 100%;" class="text-center titles needsandgoals animate__animated animate__bounceInDown">
-                NEEDS & GOALS
+                <!-- NEEDS & GOALS -->
                 <div>
                     <ul>
                         <li>Business Knowledge</li>
@@ -83,80 +88,79 @@
             </div>
             </div>
         </div>
+        <!-- Top Topics END -->
 
         <!-- Start button Success -->
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <div class="mt-5" style="width: 800px; display: flex; justify-content: space-between;">
-                <img onclick="showWorkEthics()" style="display: none;" id="consultant" class="animate__animated animate__bounceInDown topic" src="Consultant.svg" alt="">
-                <img onclick="showCompetition()" style="display: none;" id="media" class="rotating animate__animated animate__bounceInDown topic" src="Media.svg" alt="">
-                <img onclick="showNeedsAndGoals()" style="display: none;" id="customer" class="animate__animated animate__bounceInDown topic" src="Customer.svg" alt="">
-            </div>
-
-            <div id="verticlelines" style="width: 730px; display: none; justify-content: space-between;">
-                <div class="animate__animated animate__bounceInDown" style="height: 30px; width: 3px; background-color: white;"></div>
-                <div class="animate__animated animate__bounceInDown" style="height: 30px; width: 3px; background-color: white;"></div>
-                <div class="animate__animated animate__bounceInDown" style="height: 30px; width: 3px; background-color: white;"></div>
-            </div>
-
-            <div id="horizontalline" style="width: 730px; display: none; justify-content: center;">
-                <div class="animate__animated animate__bounceInLeft" style="height: 3px; width: 100%; background-color: white;"></div>
-            </div>
-
-            <div class="row" style="width: 730px;">
-                <div class="col ps-0">
-                    <div class="animate__animated animate__bounceInDown" style="width: 3px; height: 100%; background-color: white;"></div>
+        <div class="w-100" style="display: flex; flex-direction: column; align-items: center;">
+            
+            <!-- Topic Catagories START -->
+            <div class="mt-5 row w-100">
+                <div class="col-4  text-center text-white">                
+                    <span style="display: none;" class="topic-heading">Consultant</span>
+                    <img onclick="showWorkEthics()" style="display: none;" id="consultant" class="img-fluid ms-auto me-auto animate__animated animate__bounceInDown topic" src="Consultant.svg" alt="">
+                    <div class="ms-auto me-auto animate__animated animate__bounceInDown mb-0" style="width: 3px; height: 30px; background-color: white;"></div>
                 </div>
-                <div class="col">
-                    <div id="target" class="animate__animated animate__bounceIn text-center text-white" style="font-size: 35px; display: none;">                             
+                <div class="col-4 text-center text-white">                    
+                    <span style="display: none;" class="topic-heading">Media</span>
+                    <img onclick="showCompetition()" style="display: none;" id="media" class="img-fluid ms-auto rotating me-auto animate__animated animate__bounceInDown topic" src="Media.svg" alt="">
+                    <div class="ms-auto me-auto animate__animated animate__bounceInDown mb-0" style="width: 3px; height: 30px; background-color: white;"></div>
+                </div>
+                <div class="col-4 text-center text-white">
+                    <span style="display: none;" class="topic-heading">Customer</span>
+                    <img onclick="showNeedsAndGoals()" style="display: none;" id="customer" class="img-fluid ms-auto me-auto animate__animated animate__bounceInDown topic" src="Customer.svg" alt="">
+                    <div class="ms-auto me-auto animate__animated animate__bounceInDown mb-0" style="width: 3px; height: 30px; background-color: white;"></div>
+                </div>
+            </div>
+            <!-- Topic Catagories END -->
+
+            
+
+            <div class="row w-100">                
+                <div>
+                    <div id="target" class="ms-auto me-auto animate__animated animate__bounceIn text-center text-white" style="font-size: 35px; display: none;">                             
+                        <div class="ms-auto me-auto animate__animated animate__bounceInLeft" style="height: 3px; width: 67.9%; background-color: white;"></div>
                         =
                     </div>
-                </div>
-                <div class="col pe-0">
-                    <div class="animate__animated animate__bounceInDown" style="float: right; width: 3px; height: 100%; background-color: white;"></div>
                 </div>
             </div>
 
             
             <div class="row" style="width: 730px;">
-                <div class="col ps-0">
-                    <div id="verticlelines3" class="animate__animated animate__bounceInDown" style="width: 3px; height: 100%; background-color: white; display: none;"></div>
-                </div>
+                
                 <div class="col">
                     <div id="start" onclick="hideDefault()" class="start animate__animated animate__heartBeat ms-auto ms-auto me-auto">
                         
                     </div>
-                </div>
-                <div class="col pe-0">
-                    <div id="verticlelines4" class="animate__animated animate__bounceInDown" style="float: right; width: 3px; height: 100%; background-color: white; display: none;"></div>
-                </div>
+                </div>                
             </div>
             <div id="tag-line" style="font-family: 'Poppins', sans-serif;" class="animate__animated animate__heartBeat text-white">
-                Click on, the treasure box to open the treasure of ISA Media
+                <h3>Click on, the treasure box to open the treasure of ISA Media</h3>
             </div>
 
-            <div id="verticlelines2" style="width: 730px; display: none; justify-content: space-between;">
+            <!-- <div id="verticlelines2" style="width: 730px; display: none; justify-content: space-between;">
                 <div class="animate__animated animate__bounceInDown" style="height: 30px; width: 3px; background-color: white;"></div>
                 <div class="animate__animated animate__bounceInDown" style="height: 30px; width: 3px; background-color: white;"></div>
                 <div class="animate__animated animate__bounceInDown" style="height: 30px; width: 3px; background-color: white;"></div>
-            </div>            
+            </div>             -->
         </div>
+        
 
         <!-- Bottom -->
         <div style="display: flex; flex-direction: row; align-items: flex-end;" class="w-100">
             <div class="col-4 p-0">
-                <img id="sharpattitude1" class="animate__animated animate__bounceInUp" style="display: none; width: 100%;" src="SHARP ATTITUDE.svg" alt="">                
+                <img id="sharpattitude1" class="animate__animated animate__bounceInUp" style="display: none; width: 100%;" src="SHARP ATTITUDE 2.svg" alt="">                
             </div>
             <div class="col-4 p-0">
-                <img id="outcome1" class="animate__animated animate__bounceInUp" style="display: none; width: 100%;" src="OUTCOME.svg" alt="">
+                <img id="outcome1" class="animate__animated animate__bounceInUp" style="display: none; width: 100%;" src="OUTCOME 2.svg" alt="">
             </div>
             <div class="col-4 p-0">
-                <img id="type1" class="animate__animated animate__bounceInUp" style="display: none; width: 100%;" src="TYPE.svg" alt="">
+                <img id="type1" class="animate__animated animate__bounceInUp" style="display: none; width: 100%;" src="TYPE 2.svg" alt="">
             </div>
         </div>
         <div class="row w-100">
             <div class="col-4 p-0">
                 <div id="sharpattitude2" style="display: none; height: 100%;" class="text-center titles sharpattitude animate__animated animate__bounceInUp">
-                    SHARP ATTITUDE
+                    <!-- SHARP ATTITUDE -->
                     <div>
                         <ul>
                             <li>Matching</li>
@@ -174,7 +178,7 @@
 
             <div class="col-4 p-0">
             <div id="outcome2" style="display: none; height: 100%;" class="text-center titles outcome animate__animated animate__bounceInUp">
-                OUTCOME
+                <!-- OUTCOME -->
                 <div>
                     <ul>
                         <li>The value</li>
@@ -190,7 +194,7 @@
 
             <div class="col-4 p-0">
             <div id="type2" style="display: none; height: 100%;" class="text-center titles type animate__animated animate__bounceInUp">
-                TYPE
+                <!-- TYPE -->
                 <div>
                     <ul>
                         <li>Branch</li>
@@ -249,10 +253,21 @@
                 x.style.display = "block";
             } //else {x.style.display = "none";}
 
+            var topics = document.getElementsByClassName("topic-heading")
+            if (topics[0].style.display === "none") {
+                topics[0].style.display = "block";
+            }
+            if (topics[1].style.display === "none") {
+                topics[1].style.display = "block";
+            }
+            if (topics[2].style.display === "none") {
+                topics[2].style.display = "block";
+            }
+        
             var consultant = document.getElementById("consultant");
             if (consultant.style.display === "none") {
                 consultant.style.display = "block";
-            } // else {consultant.style.display = "none";}
+            } //else {consultant.style.display = "none";}
 
             var media = document.getElementById("media");
             if (media.style.display === "none") {
@@ -274,15 +289,15 @@
                 verticlelines2.style.display = "flex";
             } // else {verticlelines2.style.display = "none";}
 
-            var verticlelines3 = document.getElementById("verticlelines3");
-            if (verticlelines3.style.display === "none") {
-                verticlelines3.style.display = "block";
-            } // else {verticlelines2.style.display = "none";}
+            // var verticlelines3 = document.getElementById("verticlelines3");
+            // if (verticlelines3.style.display === "none") {
+            //     verticlelines3.style.display = "block";
+            // } // else {verticlelines2.style.display = "none";}
 
-            var verticlelines4 = document.getElementById("verticlelines4");
-            if (verticlelines4.style.display === "none") {
-                verticlelines4.style.display = "block";
-            } // else {verticlelines2.style.display = "none";}
+            // var verticlelines4 = document.getElementById("verticlelines4");
+            // if (verticlelines4.style.display === "none") {
+            //     verticlelines4.style.display = "block";
+            // } // else {verticlelines2.style.display = "none";}
 
             var horizontalline = document.getElementById("horizontalline");
             if (horizontalline.style.display === "none") {
@@ -294,44 +309,44 @@
             var workethics1 = document.getElementById("workethics1");
             if (workethics1.style.display === "none") {
                 workethics1.style.display = "flex";
-            } //else {workethics1.style.display = "none";}
+            } else {workethics1.style.display = "none";}
 
             var workethics2 = document.getElementById("workethics2");
             if (workethics2.style.display === "none") {
                 workethics2.style.display = "block";
-            } //else {workethics2.style.display = "none";}
+            } else {workethics2.style.display = "none";}
 
             var sharpattitude1 = document.getElementById("sharpattitude1");
             if (sharpattitude1.style.display === "none") {
                 sharpattitude1.style.display = "flex";
-            } //else {sharpattitude1.style.display = "none";}
+            } else {sharpattitude1.style.display = "none";}
 
             var sharpattitude2 = document.getElementById("sharpattitude2");
             if (sharpattitude2.style.display === "none") {
                 sharpattitude2.style.display = "block";
-            } // else {sharpattitude2.style.display = "none";}
+            } else {sharpattitude2.style.display = "none";}
         }
 
         function showCompetition() {
             var competition1 = document.getElementById("competition1");
             if (competition1.style.display === "none") {
                 competition1.style.display = "flex";
-            } //else {competition1.style.display = "none";}
+            } else {competition1.style.display = "none";}
 
             var competition2 = document.getElementById("competition2");
             if (competition2.style.display === "none") {
                 competition2.style.display = "block";
-            } //else {competition2.style.display = "none";}
+            } else {competition2.style.display = "none";}
 
             var outcome1 = document.getElementById("outcome1");
             if (outcome1.style.display === "none") {
                 outcome1.style.display = "flex";
-            } //else {outcome1.style.display = "none";}
+            } else {outcome1.style.display = "none";}
 
             var outcome2 = document.getElementById("outcome2");
             if (outcome2.style.display === "none") {
                 outcome2.style.display = "block";
-            } //else {outcome2.style.display = "none";}
+            } else {outcome2.style.display = "none";}
             
         }
 
@@ -339,22 +354,22 @@
             var needsandgoals1 = document.getElementById("needsandgoals1");
             if (needsandgoals1.style.display === "none") {
                 needsandgoals1.style.display = "flex";
-            } //else {needsandgoals1.style.display = "none";}
+            } else {needsandgoals1.style.display = "none";}
 
             var needsandgoals2 = document.getElementById("needsandgoals2");
             if (needsandgoals2.style.display === "none") {
                 needsandgoals2.style.display = "block";
-            } // else {needsandgoals2.style.display = "none";}
+            } else {needsandgoals2.style.display = "none";}
 
             var type1 = document.getElementById("type1");
             if (type1.style.display === "none") {
                 type1.style.display = "flex";
-            } //else {type1.style.display = "none";}
+            } else {type1.style.display = "none";}
 
             var type2 = document.getElementById("type2");
             if (type2.style.display === "none") {
                 type2.style.display = "block";
-            } // else {type2.style.display = "none";}
+            } else {type2.style.display = "none";}
         }
         
     </script>
