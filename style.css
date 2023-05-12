@@ -160,3 +160,9 @@ body {
   100%   { transform: translate(0, -0px); }   
 }
 /* Floating END */
+
+/* modal-content START */
+.modal-content {
+  width: 80%;
+}
+/* modal-content END */
