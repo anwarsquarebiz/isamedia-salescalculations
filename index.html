@@ -98,17 +98,17 @@
                 <div class="col-4  text-center text-white">                
                     <span style="display: none;" class="topic-heading">Consultant</span>
                     <img onclick="showWorkEthics()" style="display: none;" id="consultant" class="img-fluid ms-auto me-auto animate__animated animate__bounceInDown topic" src="Consultant.svg" alt="">
-                    <div class="ms-auto me-auto animate__animated animate__bounceInDown mb-0" style="width: 3px; height: 30px; background-color: white;"></div>
+                    <div id="leftvertical" class="ms-auto me-auto animate__animated animate__bounceInDown mb-0" style="display: none; width: 3px; height: 30px; background-color: white;"></div>
                 </div>
                 <div class="col-4 text-center text-white">                    
                     <span style="display: none;" class="topic-heading">Media</span>
                     <img onclick="showCompetition()" style="display: none;" id="media" class="img-fluid ms-auto rotating me-auto animate__animated animate__bounceInDown topic" src="Media.svg" alt="">
-                    <div class="ms-auto me-auto animate__animated animate__bounceInDown mb-0" style="width: 3px; height: 30px; background-color: white;"></div>
+                    <div id="middlevertical" class="ms-auto me-auto animate__animated animate__bounceInDown mb-0" style="display: none; width: 3px; height: 30px; background-color: white;"></div>
                 </div>
                 <div class="col-4 text-center text-white">
                     <span style="display: none;" class="topic-heading">Customer</span>
                     <img onclick="showNeedsAndGoals()" style="display: none;" id="customer" class="img-fluid ms-auto me-auto animate__animated animate__bounceInDown topic" src="Customer.svg" alt="">
-                    <div class="ms-auto me-auto animate__animated animate__bounceInDown mb-0" style="width: 3px; height: 30px; background-color: white;"></div>
+                    <div id="rightvertical" class="ms-auto me-auto animate__animated animate__bounceInDown mb-0" style="display: none; width: 3px; height: 30px; background-color: white;"></div>
                 </div>
             </div>
             <!-- Topic Catagories END -->
@@ -279,15 +279,15 @@
                 customer.style.display = "block";
             } // else {customer.style.display = "none";}
 
-            var verticlelines = document.getElementById("verticlelines");
-            if (verticlelines.style.display === "none") {
-                verticlelines.style.display = "flex";
-            } // else {verticlelines.style.display = "none";}
+            // var verticlelines = document.getElementById("verticlelines");
+            // if (verticlelines.style.display === "none") {
+            //     verticlelines.style.display = "flex";
+            // } // else {verticlelines.style.display = "none";}
 
-            var verticlelines2 = document.getElementById("verticlelines2");
-            if (verticlelines2.style.display === "none") {
-                verticlelines2.style.display = "flex";
-            } // else {verticlelines2.style.display = "none";}
+            // var verticlelines2 = document.getElementById("verticlelines2");
+            // if (verticlelines2.style.display === "none") {
+            //     verticlelines2.style.display = "flex";
+            // } // else {verticlelines2.style.display = "none";}
 
             // var verticlelines3 = document.getElementById("verticlelines3");
             // if (verticlelines3.style.display === "none") {
@@ -299,10 +299,27 @@
             //     verticlelines4.style.display = "block";
             // } // else {verticlelines2.style.display = "none";}
 
-            var horizontalline = document.getElementById("horizontalline");
-            if (horizontalline.style.display === "none") {
-                horizontalline.style.display = "flex";
-            } // else {horizontalline.style.display = "none";}
+            // var horizontalline = document.getElementById("horizontalline");
+            // if (horizontalline.style.display === "none") {
+            //     horizontalline.style.display = "flex";
+            // } // else {horizontalline.style.display = "none";}
+
+            var leftvertical = document.getElementById("leftvertical");
+            if (leftvertical.style.display === "none") {
+                leftvertical.style.display = "block";
+            } // else {leftvertical.style.display = "none";}
+
+            var middlevertical = document.getElementById("middlevertical");
+            if (middlevertical.style.display === "none") {
+                middlevertical.style.display = "block";
+            } // else {middlevertical.style.display = "none";}
+            
+            var rightvertical = document.getElementById("rightvertical");
+            if (rightvertical.style.display === "none") {
+                rightvertical.style.display = "block";
+            } // else {rightvertical.style.display = "none";}
+
+
         }
 
         function showWorkEthics() {
