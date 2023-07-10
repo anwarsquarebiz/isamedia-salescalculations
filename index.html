@@ -23,6 +23,8 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
+    <script src="script.js"></script>
+
 </head>
 
 <body style="background-color: #7CAAB9;">
@@ -383,9 +385,8 @@
     <!-- WORK ETHICS Modal Start -->
     <div class="modal fade" id="workethicsmodal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div id="workethics2" style="height: 100%;"
-                    class="text-center titles workethics animate__animated animate__bounceInDown">
+            <div id="work-ethics-modal-content" class="modal-content">
+                <div id="workethics2" style="height: 100%;" class="text-center titles workethics">
                     <!-- WORK ETHICS -->
                     <div>
                         <div class="topicnamebottom"
@@ -395,7 +396,7 @@
                                 class="ms-5 bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <ul>
-                            <li>Effort</li>
+                            <li onclick="changeToEffort()">Effort</li>
                             <li>Behavior</li>
                             <li>Values</li>
                             <li>Goals & KPI</li>
@@ -405,19 +406,91 @@
                     </div>
                 </div>
             </div>
+
+            <div style="display: none;" id="effort-content" class="modal-content">
+                <div class="modal-header animate__animated animate__bounceInRight">
+                    <img class="me-3" src="Text.svg" alt="" onclick="effortShowText()">
+                    <img class="me-3" src="Video.svg" alt="" onclick="effortShowVideo()">
+                    <img src="Audio.svg" alt="" onclick="effortShowAudio()">
+
+                    <button onclick="backToEthicsModal()" type="button" class="btn-close"></button>
+                </div>
+                <div class="modal-body animate__animated animate__bounceInRight">
+                    <!-- Title -->
+                    <h1>Effort</h1>
+
+                    <!-- Text -->
+                    <div id="efforttext" class="text">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.
+                        </p>
+
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.
+                        </p>
+                    </div>
+
+                    <!-- Video -->
+                    <iframe id="effortvideo" style="display: none;" width="100%" height="260"
+                        src="https://www.youtube.com/embed/xMs4e9esYkg" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+
+                    <!-- Audio -->
+                    <div id="effortaudio">
+                        The audio will be placed here
+                    </div>
+                </div>
+
+                <script>
+                    var efforttext = document.getElementById("efforttext");
+                    var effortvideo = document.getElementById("effortvideo");
+                    var effortaudio = document.getElementById("effortaudio");
+
+                    function effortShowText() {
+                        efforttext.style.display = "block";
+                        effortvideo.style.display = "none";
+                        effortaudio.style.display = "none";
+                    }
+
+                    function effortShowVideo() {
+                        efforttext.style.display = "none";
+                        effortvideo.style.display = "block";
+                        effortaudio.style.display = "none";
+                    }
+
+                    function effortShowAudio() {
+                        efforttext.style.display = "none";
+                        effortvideo.style.display = "none";
+                        effortaudio.style.display = "block";
+                    }
+                </script>
+            </div>
         </div>
     </div>
 
     <!-- Button to invoke workethicsmodal -->
     <button id="workethicmodalopenbutton" style="display: none;" data-bs-toggle="modal"
         data-bs-target="#workethicsmodal">Show Work Ethics Modal</button>
-    
+
     <!-- WORK ETHICS Modal End -->
 
     <!-- COMPETITOR Modal Start -->
     <div class="modal fade" id="sharpattitudemodal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
+            <div id="work-ethics-content" class="modal-content">
                 <div id="workethics2" style="height: 100%;"
                     class="text-center titles workethics animate__animated animate__bounceInDown">
                     <!-- SHARP ATTITUDE -->
@@ -439,6 +512,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -447,7 +521,7 @@
         data-bs-target="#sharpattitudemodal">Competitor Ethics Modal</button>
     <!-- COMPETITOR Modal End -->
 
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
@@ -521,16 +595,16 @@
             var sharpattitude2 = document.getElementById("sharpattitude2");
 
             if (situation1 === 0) {
-                document.getElementById("workethicmodalopenbutton").click()                
+                document.getElementById("workethicmodalopenbutton").click()
                 situation1 = 1
             }
-            else if (situation1 === 1) {                              
+            else if (situation1 === 1) {
                 workethics1.style.display = "flex";
                 workethics2.style.display = "block";
                 situation1 = 2
             }
             else if (situation1 === 2) {
-                document.getElementById("sharpattitudemodalopenbutton").click()  
+                document.getElementById("sharpattitudemodalopenbutton").click()
                 situation1 = 3
             }
             else if (situation1 === 3) {
@@ -562,7 +636,7 @@
             var outcome2 = document.getElementById("outcome2");
 
             if (situation2 === 0) {
-                document.getElementById("competitormodalopenbutton").click()                
+                document.getElementById("competitormodalopenbutton").click()
                 situation1 = 1
             }
             if (situation2 === 1) {
